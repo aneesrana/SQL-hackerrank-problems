@@ -42,6 +42,6 @@ The STATION table is described as follows:
 where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution**
-```sql
-select truncate(max(lat_n),4) from station where lat_n< 137.2345;
+```select CAST(MAX(LAT_N) AS DECIMAL (10,4)) from station
+where LAT_N < 137.2345;
 ```
